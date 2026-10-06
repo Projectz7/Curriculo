@@ -1,55 +1,433 @@
 <!DOCTYPE html>
-<html>
-    <head> 
-        <meta charset="UTF-8">
-        <title>CURRÍCULO</title>
-        <link rel="stylesheet" href="=style.css">
-    </head>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Currículo — Vanderson Ramos dos Santos</title>
+<meta name="description" content="Currículo web de Vanderson Ramos dos Santos — Administrador, MBA em Gestão de Projetos, com experiência em liderança de equipes, relatórios e cronogramas. Salvador/BA.">
+<meta name="author" content="Vanderson Ramos dos Santos">
+<meta name="theme-color" content="#c315a3">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#171219">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c315a3'/%3E%3Ctext x='32' y='43' font-family='Arial, sans-serif' font-size='28' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EVS%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Vanderson Ramos dos Santos",
+  "jobTitle": "Administrador",
+  "description": "Administrador com MBA em Gestão de Projetos e experiência em liderança de equipes, relatórios de projetos e cronogramas.",
+  "email": "mailto:projectsevenz7@gmail.com",
+  "telephone": "+5571992226730",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Bela Vista do Parque São Cristóvão",
+    "addressLocality": "Salvador",
+    "addressRegion": "BA",
+    "postalCode": "41500-260",
+    "addressCountry": "BR"
+  },
+  "sameAs": ["https://www.linkedin.com/in/vanderson-santos-ba496810a"],
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "Estácio de Sá — MBA em Gestão de Projetos"},
+    {"@type": "CollegeOrUniversity", "name": "Estácio de Sá — Bacharelado em Administração de Empresas"}
+  ]
+}
+</script>
+<style>
+  :root{
+    --accent:#c315a3;
+    --accent-strong:#7c0b63;
+    --accent-soft:rgba(195,21,163,.12);
+    --h-color:#7c0b63;
+    --bg:#f6f4f8;
+    --surface:#ffffff;
+    --text:#241b2b;
+    --muted:#6b6172;
+    --border:#e5e0ea;
+    --bar:rgba(255,255,255,.85);
+    --radius:14px;
+    --hero-grad:linear-gradient(140deg,#4d0739 0%,#8f0e73 48%,#c315a3 100%);
+    --hero-fg:#ffffff;
+    --hero-sub:rgba(255,255,255,.88);
+    --hero-chip:rgba(255,255,255,.14);
+    --hero-chip-border:rgba(255,255,255,.28);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#171219;
+      --surface:#211a25;
+      --text:#f3eef5;
+      --muted:#b3a9ba;
+      --border:#382e3e;
+      --h-color:#f0a6df;
+      --accent-soft:rgba(195,21,163,.2);
+      --bar:rgba(23,18,25,.82);
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block}
+  a{color:var(--accent)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+  ::selection{background:var(--accent);color:#fff}
 
-    <body>
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{position:fixed;left:10px;top:10px;z-index:99;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px}
 
-       <a href="file:///C:/Users/vanderson.ramos/OneDrive%20-%20FREIRE,%20GERBASI,%20BITTENCOURT%20E%20MACEDO%20SOC%20DE%20ADV/Fontes%20de%20dados/ProjectGIT-main/1%20Curr%C3%ADculo%20Web.html">  <button>Home</button> 
-        </a><a href="file:///C:/Users/vanderson.ramos/OneDrive%20-%20FREIRE,%20GERBASI,%20BITTENCOURT%20E%20MACEDO%20SOC%20DE%20ADV/Fontes%20de%20dados/ProjectGIT-main/2%20Galeria.html"><button>Galeria</button></a>
-       <img src="I.Vanderson.jpg"; width="100%">
+  /* ---------- Barra de navegação ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:20;
+    background:var(--bar);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .topnav{
+    max-width:960px;margin:0 auto;padding:10px 20px;
+    display:flex;flex-wrap:wrap;align-items:center;gap:6px;
+  }
+  .topnav a{
+    text-decoration:none;color:var(--muted);font-weight:600;font-size:.92rem;
+    padding:8px 14px;border-radius:999px;transition:background .15s,color .15s;
+  }
+  .topnav a:hover{background:var(--accent-soft);color:var(--accent)}
+  .topnav a.active{background:var(--accent);color:#fff}
+  .print-btn{
+    margin-left:auto;display:inline-flex;align-items:center;gap:8px;
+    background:transparent;border:1.5px solid var(--accent);color:var(--accent);
+    font-weight:700;font-size:.88rem;padding:8px 16px;border-radius:999px;cursor:pointer;
+    transition:background .15s,color .15s;
+  }
+  .print-btn:hover{background:var(--accent);color:#fff}
+  .print-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-        
-        <h1>CURRÍCULO</h1>
+  /* ---------- Cabeçalho / perfil ---------- */
+  .container{max-width:960px;margin:0 auto;padding:0 20px}
+  .hero{
+    margin-top:26px;border-radius:var(--radius);padding:30px;
+    background:var(--hero-grad);color:var(--hero-fg);
+    display:grid;grid-template-columns:176px 1fr;gap:30px;align-items:center;
+    box-shadow:0 14px 40px rgba(80,7,60,.28);
+  }
+  .hero .photo{
+    width:176px;height:176px;border-radius:50%;object-fit:cover;
+    border:4px solid rgba(255,255,255,.7);
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  .hero h1{font-size:clamp(1.55rem,4.4vw,2.35rem);line-height:1.15;letter-spacing:-.01em}
+  .headline{color:var(--hero-sub);font-weight:600;font-size:1.06rem;margin-top:6px}
+  .meta{color:var(--hero-sub);font-size:.95rem;margin-top:10px}
+  .contact{list-style:none;display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+  .contact a{
+    display:inline-flex;align-items:center;gap:8px;text-decoration:none;
+    color:#fff;background:var(--hero-chip);border:1px solid var(--hero-chip-border);
+    padding:8px 14px;border-radius:999px;font-size:.88rem;font-weight:600;
+    transition:background .15s;
+  }
+  .contact a:hover{background:rgba(255,255,255,.26)}
+  .contact svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
 
-        <ul>Vanderson Ramos Dos Santos</ul>
-        <ul> Casado, 30 Anos, CNH: AB. </ul>
-        <ul> Rua Bela Vista Do Parque São Cristóvão</ul>
-        <ul> Salvador, Bahia, CEP: 41500-260</ul>
-        <ul> WhatsApp: (71)99222-6730. E-MAIL: projectsevenz7@gmail.com</ul>
-        <ul id="link">//www.linkedin.com/in/vanderson-santos-ba496810a</ul>
+  /* ---------- Seções ---------- */
+  main{margin-top:34px}
+  section{margin-top:34px}
+  .sec-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+  .sec-head::before{content:"";width:28px;height:4px;border-radius:2px;background:var(--accent);flex:none}
+  h2{font-size:1.12rem;text-transform:uppercase;letter-spacing:.13em;color:var(--h-color)}
+  .lead{font-size:1.04rem;color:var(--text)}
 
-        <h2>OBJETIVO</h2>
-        
+  /* Qualificações */
+  .qa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .qa{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;break-inside:avoid}
+  .qa h3{font-size:.98rem;color:var(--h-color);margin-bottom:6px}
+  .qa p{font-size:.93rem;color:var(--muted)}
 
-        <p><strong> Preferência em empresas focadas em gestão de projetos, mas estou aberto a novos horizontes. Disponível para início imediato, viagem ou mudança de residência.
-        </strong></p>
+  /* Experiências — linha do tempo */
+  .timeline{
+    display:grid;gap:26px;margin-left:8px;padding-left:26px;
+    border-left:2px solid var(--border);
+  }
+  .xp{position:relative;break-inside:avoid}
+  .xp::before{
+    content:"";position:absolute;left:-33px;top:7px;
+    width:12px;height:12px;border-radius:50%;
+    background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft);
+  }
+  .xp-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .xp-role{font-weight:700;font-size:1.04rem}
+  .badge{
+    font-size:.78rem;font-weight:700;white-space:nowrap;
+    background:var(--accent-soft);color:var(--h-color);
+    padding:3px 12px;border-radius:999px;
+  }
+  .xp-co{color:var(--accent);font-weight:600;font-size:.98rem;margin-top:2px}
+  .xp p{color:var(--muted);font-size:.94rem;margin-top:6px}
 
-        <h2>QUALIFICAÇÕES</h2>
-        <p>Liderança de três à quarenta pessoas, em equipes Próximas ou separadas por estados, até 12 equipes simultaneamente. Profissional organizado e responsável por desenvolver relatório do projeto e cronogramas de viagens e serviços para cada equipe. Funcionário de confiança; os recursos dos projetos e viagens era a mim confiados, estoque de matérias de auto valor, tudo com transparência evitando problemas. Trabalhador focado; carteira de trabalho assinada dos 17 aos 30 anos, no mesmo período que tirei a carteira de habilitação, fiz faculdade EAD, pós-graduação em Gestão de Projetos e cursos na minha área. Autodidata; busco aprender por conta própria, melhores formas de desenvolver o meu trabalho, como programas para apresentar ideias ou/e resolver problemas. Resolução de problemas e conflitos; Não importa a situação, sempre mantenho a calma e observo o problema como um desafio a ser superado.</p>
-        
+  /* Formação */
+  .edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+  .edu{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:var(--radius);padding:18px 20px;break-inside:avoid}
+  .edu h3{font-size:1rem}
+  .edu .inst{color:var(--muted);font-size:.92rem;margin-top:4px}
+  .edu .year{display:inline-block;margin-top:10px;font-size:.8rem;font-weight:700;color:var(--h-color);background:var(--accent-soft);padding:2px 12px;border-radius:999px}
 
-        <h2>EXPERIÊNCIAS</h2>
-        <p> Administrador com Gestão em Projetos Abr 2022 – Maio 2022 (2 meses). <br><strong> Mireds Tecnologia e Serviços LTDA. </strong><br><em> Empresa de contratação Terceirizada, na área de projetos (A Proprietária do Contrato Prorrogou a vaga, depois da empresa me contratar, fui dispensado)</em>
-        </p>
-        <p> Auxiliar Administrativo em Geral Ago 2021 – Abr 2022 (8 meses). <br><strong>Arqtec Revestimentos Metálicos e Serviços LTDA.</strong><br><em>  Empresa de construção, focada em projetos de ACM composto, produção e instalação.</em>
-        </p>
-        <p> Assistente de Projetos Jun 2020 – Jul 2021 (1ano e 1 mês). <br><strong>Testes Moleculares.</strong><br><em> Empresa da área de Saúde, focada em exames laboratoriais, coleta em massa.</em>
-        </p>
-        <p> Auxiliar de Projetos III Jan 2017 – Abril 2019 (2 anos e 3 meses).<br><strong> Maranatha Voluntários Internacional.</strong><br><em>  Empresa de construção, focada em projetos sociais, escolas, hospitais e igrejas.</em>
-        </p>
-        <p>Supervisor de Projetos Jun 2013 - Dez 2017 (1 ano e 6 meses). <br><strong>União Leste Brasileira LTDA. </strong><br><em> Empresa responsável pela administração e expansão da igreja adventista do sétimo dia</em>
-        </p>
+  /* Conhecimentos */
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:16px}
+  .skill-group{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;break-inside:avoid}
+  .skill-group h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:12px}
+  .chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .chips li{
+    font-size:.86rem;font-weight:600;
+    background:var(--accent-soft);color:var(--h-color);
+    padding:5px 13px;border-radius:999px;
+  }
 
-        <h2>FORMAÇÃO</h2>
-        <p> MBA em Gestão de Projetos Estácio De Sá, <br><strong> Lauro de Freitas. Salvador Ba 2020 – 2021 </strong></p>
-        <p> Bacharel em Administração de Empresas Estácio De Sá, <br><strong> Campus Gilberto Gil Salvador Ba 2014 – 2019</strong></p>
-        
-        <h2>CONHECIMENTO</h2>
+  footer{
+    border-top:1px solid var(--border);
+    margin-top:46px;padding:24px 20px 34px;
+    text-align:center;color:var(--muted);font-size:.88rem;
+  }
+  footer strong{color:var(--h-color)}
 
-       <p>MsProjects. Zenkit, Monday, Runrun.IT.</br><strong>Word, Excel, PowerPoint.</br></strong>Sketchup, Blender. Paint 3D.</br><strong>Manipulação de Imagem, Áudio e Vídeo.</strong></br> Power BI, Data Studio, Tableau, Canva.</p>
-    </body>
+  /* ---------- Responsivo ---------- */
+  @media (max-width:680px){
+    .hero{grid-template-columns:1fr;justify-items:center;text-align:center;padding:26px 22px}
+    .hero .photo{width:148px;height:148px;margin:0 auto}
+    .contact{justify-content:center}
+    .topnav{padding:10px 14px}
+    .print-btn span{display:none}
+    .print-btn{padding:9px 12px}
+    .timeline{margin-left:2px}
+  }
+
+  /* ---------- Impressão / PDF ---------- */
+  @media print{
+    :root{
+      --bg:#fff;--surface:#fff;--text:#1a1a1a;--muted:#454545;
+      --border:#c9c9c9;--accent-soft:#f7e6f4;--h-color:#7c0b63;
+      --hero-grad:none;--hero-fg:#1a1a1a;--hero-sub:#454545;
+      --hero-chip:#f2f2f2;--hero-chip-border:#bbb;
+    }
+    .topbar,.skip{display:none !important}
+    body{font-size:11pt;background:#fff}
+    .container{max-width:100%;padding:0}
+    .hero{
+      margin-top:0;border-radius:0;box-shadow:none;
+      border:2px solid #1a1a1a;grid-template-columns:120px 1fr;gap:20px;padding:18px;
+    }
+    .hero .photo{width:120px;height:120px;border:3px solid #1a1a1a;box-shadow:none}
+    .contact a{color:#1a1a1a;background:#f2f2f2}
+    .contact svg{stroke:#1a1a1a}
+    .qa,.edu,.skill-group{border-color:#c9c9c9}
+    section{margin-top:20px}
+    .xp,.qa,.edu,.skill-group{break-inside:avoid}
+  }
+  @page{size:A4;margin:12mm}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<nav class="topbar" aria-label="Navegação principal">
+  <div class="topnav">
+    <a class="active" aria-current="page" href="1%20Curr%C3%ADculo%20Web.html">Currículo</a>
+    <a href="2%20Galeria.html">Galeria</a>
+    <a href="5menu.html">Menu</a>
+    <a href="4Cadastro.html">Cadastro</a>
+    <a href="3Login.html">Login</a>
+    <button class="print-btn" type="button" onclick="window.print()" title="Imprimir ou salvar em PDF">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/></svg>
+      <span>Imprimir / PDF</span>
+    </button>
+  </div>
+</nav>
+
+<div class="container" id="conteudo">
+
+  <header class="hero">
+    <img class="photo" src="I.Vanderson.jpg" alt="Foto de Vanderson Ramos dos Santos">
+    <div>
+      <h1>Vanderson Ramos dos Santos</h1>
+      <p class="headline">Administrador &middot; MBA em Gestão de Projetos</p>
+      <p class="meta">Casado &middot; 30 anos &middot; CNH AB &middot; Salvador/BA</p>
+      <ul class="contact">
+        <li>
+          <a href="https://wa.me/5571992226730" target="_blank" rel="noopener" title="Abrir conversa no WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.58 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            WhatsApp (71) 99222-6730
+          </a>
+        </li>
+        <li>
+          <a href="mailto:projectsevenz7@gmail.com" title="Enviar e-mail">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            projectsevenz7@gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/vanderson-santos-ba496810a" target="_blank" rel="noopener" title="Ver perfil no LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V8h4v1a6 6 0 0 1 2-1z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a href="https://www.google.com/maps/search/?api=1&query=Rua+Bela+Vista+do+Parque+S%C3%A3o+Crist%C3%B3v%C3%A3o,+Salvador,+BA,+CEP+41500-260" target="_blank" rel="noopener" title="Ver endereço no mapa">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Rua Bela Vista do Parque São Cristóvão &middot; CEP 41500-260
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <section aria-labelledby="objetivo">
+      <div class="sec-head"><h2 id="objetivo">Objetivo</h2></div>
+      <p class="lead">Preferência por empresas focadas em gestão de projetos, mas aberto a novos horizontes. Disponível para início imediato, viagem ou mudança de residência.</p>
+    </section>
+
+    <section aria-labelledby="qualificacoes">
+      <div class="sec-head"><h2 id="qualificacoes">Qualificações</h2></div>
+      <div class="qa-grid">
+        <article class="qa">
+          <h3>Liderança de equipes</h3>
+          <p>Liderança de 3 a 40 pessoas, em equipes próximas ou separadas por estados, com até 12 equipes simultâneas.</p>
+        </article>
+        <article class="qa">
+          <h3>Organização e relatórios</h3>
+          <p>Profissional organizado, responsável por desenvolver relatórios de projetos e cronogramas de viagens e serviços para cada equipe.</p>
+        </article>
+        <article class="qa">
+          <h3>Confiança e transparência</h3>
+          <p>Funcionário de confiança: recursos dos projetos e das viagens e estoque de materiais de alto valor confiados a mim, sempre com transparência e sem problemas.</p>
+        </article>
+        <article class="qa">
+          <h3>Foco e constância</h3>
+          <p>Carteira de trabalho assinada dos 17 aos 30 anos — no mesmo período, tirei a habilitação, conclui a faculdade EAD, a pós-graduação em Gestão de Projetos e cursos na minha área.</p>
+        </article>
+        <article class="qa">
+          <h3>Autodidata</h3>
+          <p>Busco, por conta própria, melhores formas de desenvolver o meu trabalho, como programas para apresentar ideias e resolver problemas.</p>
+        </article>
+        <article class="qa">
+          <h3>Resolução de problemas</h3>
+          <p>Não importa a situação: mantenho a calma e encaro cada problema como um desafio a ser superado.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="experiencias">
+      <div class="sec-head"><h2 id="experiencias">Experiências</h2></div>
+      <div class="timeline">
+        <article class="xp">
+          <div class="xp-head">
+            <span class="xp-role">Administrador com Gestão em Projetos</span>
+            <span class="badge">abr/2022 – mai/2022 &middot; 2 meses</span>
+          </div>
+          <p class="xp-co">Mireds Tecnologia e Serviços LTDA</p>
+          <p>Empresa de contratação terceirizada, na área de projetos. Após a minha admissão, a proprietária do contrato prorrogou a vaga e ocorreu o desligamento.</p>
+        </article>
+        <article class="xp">
+          <div class="xp-head">
+            <span class="xp-role">Auxiliar Administrativo em Geral</span>
+            <span class="badge">ago/2021 – abr/2022 &middot; 8 meses</span>
+          </div>
+          <p class="xp-co">Arqtec Revestimentos Metálicos e Serviços LTDA</p>
+          <p>Empresa de construção focada em projetos de ACM composto: produção e instalação.</p>
+        </article>
+        <article class="xp">
+          <div class="xp-head">
+            <span class="xp-role">Assistente de Projetos</span>
+            <span class="badge">jun/2020 – jul/2021 &middot; 1 ano e 1 mês</span>
+          </div>
+          <p class="xp-co">Testes Moleculares</p>
+          <p>Empresa da área de saúde, focada em exames laboratoriais e coleta em massa.</p>
+        </article>
+        <article class="xp">
+          <div class="xp-head">
+            <span class="xp-role">Auxiliar de Projetos III</span>
+            <span class="badge">jan/2017 – abr/2019 &middot; 2 anos e 3 meses</span>
+          </div>
+          <p class="xp-co">Maranatha Voluntários Internacional</p>
+          <p>Empresa de construção focada em projetos sociais: escolas, hospitais e igrejas.</p>
+        </article>
+        <article class="xp">
+          <div class="xp-head">
+            <span class="xp-role">Supervisor de Projetos</span>
+            <span class="badge">jun/2013 – dez/2017 &middot; 1 ano e 6 meses</span>
+          </div>
+          <p class="xp-co">União Leste Brasileira LTDA</p>
+          <p>Empresa responsável pela administração e expansão da igreja adventista do sétimo dia.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="formacao">
+      <div class="sec-head"><h2 id="formacao">Formação</h2></div>
+      <div class="edu-grid">
+        <article class="edu">
+          <h3>MBA em Gestão de Projetos</h3>
+          <p class="inst">Estácio de Sá — Lauro de Freitas, Salvador/BA</p>
+          <span class="year">2020 – 2021</span>
+        </article>
+        <article class="edu">
+          <h3>Bacharelado em Administração de Empresas</h3>
+          <p class="inst">Estácio de Sá — Campus Gilberto Gil, Salvador/BA</p>
+          <span class="year">2014 – 2019</span>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="conhecimentos">
+      <div class="sec-head"><h2 id="conhecimentos">Conhecimentos</h2></div>
+      <div class="skills">
+        <div class="skill-group">
+          <h3>Gestão de Projetos</h3>
+          <ul class="chips">
+            <li>MS Project</li>
+            <li>Zenkit</li>
+            <li>Monday.com</li>
+            <li>Runrun.IT</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Escritório e Produtividade</h3>
+          <ul class="chips">
+            <li>Word</li>
+            <li>Excel</li>
+            <li>PowerPoint</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Design e 3D</h3>
+          <ul class="chips">
+            <li>SketchUp</li>
+            <li>Blender</li>
+            <li>Paint 3D</li>
+            <li>Imagem, áudio e vídeo</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Dados e Apresentação</h3>
+          <ul class="chips">
+            <li>Power BI</li>
+            <li>Looker Studio (Google Data Studio)</li>
+            <li>Tableau</li>
+            <li>Canva</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <strong>Vanderson Ramos dos Santos</strong> &middot; Currículo web &mdash; atualizado em outubro de 2026 &middot; Salvador, Bahia &ndash; Brasil
+</footer>
+
+</body>
 </html>
